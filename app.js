@@ -28,8 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
   secret: 'cats',
-  reseva: false,
-  saveUnintiliazed: true,
+  resave: false,
+  saveUninitialized: true,
   cookie: { maxAge: 60000 }
 }))
 
@@ -54,6 +54,6 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-app.listen(3000, () => console.log('Server started on port 3000'))
+app.listen(4444, () => console.log('Server started on port http://127.0.0.1:4444'))
 
 module.exports = app;
